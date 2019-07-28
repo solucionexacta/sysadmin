@@ -1,0 +1,39 @@
+#!/bin/bash
+pathXml=$HOME/sartas
+
+mkdir $1
+cd $1
+cp $pathXml/pomsrc.xml pomsrc.xml
+cp $pathXml/pomtst.xml pomtst.xml
+mkdir docs
+mkdir out
+cd out
+mkdir src
+mkdir src/test
+mkdir src/test/resources
+mkdir src/test/java
+ln -s ../../src/main src/main
+cd ..
+mkdir src
+mkdir src/main
+mkdir src/test
+mkdir src/main/java
+mkdir src/main/resources
+mkdir src/test/java
+mkdir src/test/resources
+mkdir src/main/java/com
+mkdir src/test/java/com
+mkdir ides
+cd ides
+mkdir eclipse
+cd eclipse
+ln -s ../../src/main main
+ln -s ../../src/test test
+ln -s ../../pomtst.xml pom.xml
+cd ..
+mkdir netbeans
+cd netbeans
+ln -s ../../src/main main
+ln -s ../../src/test test
+ln -s ../../pomtst.xml pom.xml
+cd ../..
